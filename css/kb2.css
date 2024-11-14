@@ -3,12 +3,6 @@
   box-sizing: border-box;
 }
 
-iframe {
-  width: 100%;
-  height: 5em;
-  grid-area: nav;
-}
-
 main {
   text-align: center;
   color: orange;
@@ -45,39 +39,12 @@ div.desc {
 }
 
 aside {
-  max-height: 100%;
-  overflow: auto;
-  grid-area: asi;
   color: white;
   font-size: 2.2vh;
 }
 
 .gradientbg {
   background-image: linear-gradient(to bottom right, darkblue, purple);
-}
-
-footer {
-  display: grid;
-  background-color: grey;
-  grid-area: foo;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "l r";
-}
-
-footer p {
-  padding: 0%;
-  margin: 1%;
-  display: grid;
-}
-
-#fool {
-  grid-area: l;
-  font-size: small;
-}
-
-#foor {
-  text-align: right;
-  grid-area: r;
 }
 
 #container {
