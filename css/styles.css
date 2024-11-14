@@ -1,0 +1,130 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+h1, p {
+    padding: 1% 2%;
+}
+
+h2 {
+    padding: 4% 2% 6%;
+}
+
+nav, iframe {
+    width: 100%;
+    height: 100%;
+    grid-area: nav;
+}
+
+header {
+    grid-area: hea;
+}
+
+main {
+    grid-area: mai;
+}
+
+article {
+    grid-area: art;
+}
+
+figure {
+    grid-area: fig;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 2fr auto 1fr;
+    grid-template-rows: 1.2fr auto 1fr 0.8fr;
+
+    grid-template-areas: 
+        ". . ."
+        ". img ."
+        ". p .";
+}
+
+figure > img {
+    max-width: 500px;
+    max-height: 300px;
+    margin-left: 1vh;
+    padding: 15px 10px 7.5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-bottom-style: none;
+    grid-area: img;
+}
+
+figure > figcaption {
+    margin-left: 1vh;
+    padding-left: 10px;
+    padding-bottom: 7.5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-top-style: none;
+    grid-area: p;
+
+    font-style: italic;
+    font-weight: 350;
+}
+
+aside {
+    max-height: 100%;
+    overflow: auto;
+    grid-area: asi;
+}
+
+footer {
+    display: grid;
+    background-color: grey;
+    grid-area: foo;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "l r";
+}
+
+footer p {
+    padding: 0%;
+    margin: 1%;
+    display: grid;
+}
+
+#fool {
+    grid-area: l;
+    font-size: small;
+}
+
+#foor {
+    text-align: right;
+    grid-area: r;
+}
+
+.purplebg {
+    background-color: rgb(192, 60, 204);
+}
+
+.orangeredbg {
+    background-color: rgb(221, 60, 2);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.smaller {
+    font-size: 0.9em;
+}
+
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.6fr 2fr 1fr;
+    grid-template-rows: 5em auto 1fr 1fr 5em;
+
+    grid-template-areas: 
+        "nav nav nav"
+        "hea hea asi"
+        "mai mai asi"
+        "fig art asi"
+        "foo foo foo";
+}

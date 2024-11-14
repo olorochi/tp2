@@ -1,0 +1,132 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+iframe {
+  width: 100%;
+  height: 5em;
+  grid-area: nav;
+}
+
+main {
+  text-align: center;
+  color: orange;
+  grid-area: mai;
+}
+
+h1 {
+  background: linear-gradient(to right,#2597f5 40%, #27c6db, #42a147 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div#gallery1, div#gallery2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+div.card {
+  flex: 1;
+  margin: 0.5vh;
+  border: 1px solid #ccc;
+}
+
+div.card img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 1.514vh;
+  font-size: 1.816vh;
+}
+
+aside {
+  max-height: 100%;
+  overflow: auto;
+  grid-area: asi;
+  color: white;
+  font-size: 2.2vh;
+}
+
+.gradientbg {
+  background-image: linear-gradient(to bottom right, darkblue, purple);
+}
+
+footer {
+  display: grid;
+  background-color: grey;
+  grid-area: foo;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "l r";
+}
+
+footer p {
+  padding: 0%;
+  margin: 1%;
+  display: grid;
+}
+
+#fool {
+  grid-area: l;
+  font-size: small;
+}
+
+#foor {
+  text-align: right;
+  grid-area: r;
+}
+
+#container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 164vh 1fr;
+  grid-template-rows: 5em 1fr 5em;
+
+  grid-template-areas:
+    "nav nav"
+    "mai asi"
+    "foo foo";
+}
+
+div.card:hover {
+    background-color: rebeccapurple;
+    border: 1px solid #777;
+}
+
+div#gallery1 > div.card:nth-child(3):hover,
+div#gallery1 > div.card:nth-child(4):hover {
+    animation: bob 2s;
+    animation-delay: 0ms;
+    animation-iteration-count: infinite;
+}
+
+div#gallery2 > div.card:nth-child(1):hover,
+div#gallery2 > div.card:nth-child(2):hover {
+  animation: rotate 2s;
+  animation-iteration-count: infinite;
+}
+
+div#gallery2 > div.card:nth-child(3):hover,
+div#gallery2 > div.card:nth-child(4):hover {
+  flex: 1.5;
+}
+
+@keyframes bob {
+  25% {
+    transform: translateY(5vh);
+  }
+
+  50% {
+    transform: translateY(-5vh);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
