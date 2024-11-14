@@ -17,10 +17,11 @@ h1 {
   font-size: 3.734vh;
 }
 
-div#gallery1, div#gallery2 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+div#gallery {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 div.card {
@@ -31,6 +32,7 @@ div.card {
 
 div.card img {
   width: 100%;
+  min-width: 35vh;
   height: auto;
 }
 
@@ -51,7 +53,7 @@ aside {
 #container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 164vh 1fr;
+  grid-template-columns: 160vh 1fr;
   grid-template-rows: 8.073vh 1fr 8.073vh;
 
   grid-template-areas:
@@ -65,21 +67,18 @@ div.card:hover {
     border: 0.1vh solid #777;
 }
 
-div#gallery1 > div.card:nth-child(3):hover,
-div#gallery1 > div.card:nth-child(4):hover {
-    animation: bob 2s;
-    animation-delay: 0ms;
-    animation-iteration-count: infinite;
+div.card:nth-child(3):hover,
+div.card:nth-child(4):hover {
+    animation: bob 2s infinite;
 }
 
-div#gallery2 > div.card:nth-child(1):hover,
-div#gallery2 > div.card:nth-child(2):hover {
-  animation: rotate 2s;
-  animation-iteration-count: infinite;
+div.card:nth-child(5):hover,
+div.card:nth-child(6):hover {
+  animation: rotate 2s infinite;
 }
 
-div#gallery2 > div.card:nth-child(3):hover,
-div#gallery2 > div.card:nth-child(4):hover {
+div.card:nth-child(7):hover,
+div.card:nth-child(8):hover {
   flex: 1.5;
 }
 
